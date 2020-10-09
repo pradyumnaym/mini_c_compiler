@@ -1,0 +1,58 @@
+	Op		Arg1		Arg2		Res
+------------------------------------------------------------------------
+	+		a		b		t0
+	+		t0		c		t1
+	=		13		  		i
+	=		0		  		i
+	Label		  		  		L0
+	<		i		10		t2
+	ifFalse		t2		  		L1
+	+		a		12		t3
+	=		t3		  		a
+	*		23		h		t4
+	=		t4		  		b
+	+		i		9		t5
+	=		t5		  		i
+	goto		  		  		L0
+	Label		  		  		L1
+	=		t5		  		w
+	=		t5		  		k
+	=		t5		  		ala
+	=		t5		  		s
+	*		12		3		t6
+	+		t6		9		t7
+	=		t7		  		a
+	=		20		  		b
+	Label		  		  		L2
+	ifFalse		t7		  		L3
+	-		a		1 		t8
+	=		t8		  		a
+	goto		  		  		L2
+	Label		  		  		L3
+	<		a		b		t9
+	ifFalse		t9		  		L4
+	+		a		1 		t10
+	=		t10		  		a
+	=		t9		  		t11
+	goto		  		  		L5
+	Label		  		  		L4
+	-		b		1 		t12
+	=		t12		  		b
+	=		a		  		t12
+	Label		  		  		L5
+	>		a		b		t13
+	ifFalse		t13		  		L6
+	=		a		  		t14
+	goto		  		  		L7
+	Label		  		  		L6
+	=		b		  		t14
+	Label		  		  		L7
+	=		t13		  		a
+	*		12		4		t15
+	/		t15		2		t16
+	+		t16		1		t17
+	=		t17		  		a
+	param		a
+	param		b
+	param		c
+	call		add		3
